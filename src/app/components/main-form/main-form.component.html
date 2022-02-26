@@ -1,0 +1,32 @@
+<div class="" style="margin-top: 7rem; margin-bottom: 3rem">
+  <form>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="titleInput"
+        [(ngModel)]="title"
+        placeholder="Title..."
+        disabled
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control"
+        name="descriptionInput"
+        [(ngModel)]="description"
+        placeholder="Description..."
+        rows="7"
+        disabled
+      ></textarea>
+    </div>
+    <button
+      (click)="addVideo()"
+      type="button"
+      class="btn btn-success"
+      [disabled]="!this.title && !this.description"
+    >
+      Add video
+    </button>
+  </form>
+</div>

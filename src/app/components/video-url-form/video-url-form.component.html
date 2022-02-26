@@ -1,0 +1,27 @@
+<div class="mb-3">
+  <form>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="url"
+        placeholder="URL..."
+        [(ngModel)]="videoUrl"
+      />
+    </div>
+    <button
+      (click)="m()"
+      type="button"
+      class="btn btn-secondary"
+      [disabled]="!this.videoUrl"
+    >
+      Title & description
+    </button>
+  </form>
+</div>
+
+<app-main-form
+  [title]="title"
+  [description]="description"
+  [videoUrl]="videoUrl"
+></app-main-form>
